@@ -1,26 +1,135 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Legendry Games - Free Online Games</title>
-
-    <meta
-        name="description"
-        content="Play free online browser games on Legendry Games. Discover action, arcade, racing, multiplayer and more."
-    >
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c13">
+  <meta name="description" content="Discover and play browser games on Legendry Games. Explore racing, action, adventure, puzzles and more.">
+  <title>Legendry Games — Ignite Your Play!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
+<header class="header">
+  <div class="navbar">
+    <a class="brand" href="#" aria-label="Legendry Games home">
+      <span class="brand-icon">◇</span>
+      <span>LEGENDRY<br>GAMES</span>
+    </a>
 
-    <h1>Legendry Games</h1>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-    <p>Free online games. Play instantly.</p>
+    <nav class="nav-links" id="navLinks">
+      <a class="nav-link active" href="#">Home</a>
+      <a class="nav-link" href="#categories">Categories</a>
+      <a class="nav-link" href="#trending">Trending</a>
+      <a class="nav-link" href="#new-games">New Games</a>
+    </nav>
 
-    <script src="script.js"></script>
+    <form class="search-box" id="searchForm" role="search">
+      <input id="searchInput" type="search" placeholder="Search games..." aria-label="Search games">
+      <button type="submit" aria-label="Search">⌕</button>
+    </form>
+  </div>
+</header>
 
+<main class="container">
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-tags">
+        <span>Action</span><span>Racing</span><span>Adventure</span>
+      </div>
+      <p class="eyebrow">WELCOME TO YOUR NEXT ADVENTURE</p>
+      <h1>IGNITE YOUR <span>PLAY!</span></h1>
+      <p class="hero-description">Discover incredible worlds, find your next favourite game, and play your way.</p>
+      <a class="primary-btn" href="#trending">EXPLORE GAMES <span>↗</span></a>
+      <div class="hero-meta"><span>🎮 Browser gaming</span><span>✦ New adventures await</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="hero-controller">🎮</div>
+      <span class="spark spark-one">✦</span>
+      <span class="spark spark-two">✧</span>
+    </div>
+  </section>
+
+  <section class="section" id="trending">
+    <div class="section-heading">
+      <div><p class="section-kicker">THE COMMUNITY'S PICKS</p><h2>Trending <span>Now</span></h2></div>
+      <a href="#gameGrid" class="subtle-link" id="viewAll">View all ↗</a>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="filter active" data-category="All">All Games</button>
+      <button class="filter" data-category="Racing">🏎️ Racing</button>
+      <button class="filter" data-category="Adventure">🛡️ Adventure</button>
+      <button class="filter" data-category="Space">🚀 Space</button>
+      <button class="filter" data-category="Action">⚔️ Action</button>
+      <button class="filter" data-category="Puzzle">🧩 Puzzle</button>
+    </div>
+
+    <div class="game-grid" id="gameGrid">
+      <article class="game-card" data-title="Cyber Racer" data-category="Racing" data-url="">
+        <div class="game-art art-car"><span>🏎️</span><small>NEON SPEED</small></div>
+        <div class="game-details"><h3>Cyber Racer</h3><p>Race through neon streets.</p><div class="game-bottom"><span class="category-tag">Racing</span><button class="play-btn" aria-label="Play Cyber Racer">▶</button></div></div>
+      </article>
+
+      <article class="game-card" data-title="Fantasy Knight" data-category="Adventure" data-url="">
+        <div class="game-art art-knight"><span>🛡️</span><small>EPIC QUEST</small></div>
+        <div class="game-details"><h3>Fantasy Knight</h3><p>Enter a legendary world.</p><div class="game-bottom"><span class="category-tag">Adventure</span><button class="play-btn" aria-label="Play Fantasy Knight">▶</button></div></div>
+      </article>
+
+      <article class="game-card" data-title="Space Shooter" data-category="Space" data-url="">
+        <div class="game-art art-space"><span>🚀</span><small>DEEP SPACE</small></div>
+        <div class="game-details"><h3>Space Shooter</h3><p>Explore the galaxy.</p><div class="game-bottom"><span class="category-tag">Space</span><button class="play-btn" aria-label="Play Space Shooter">▶</button></div></div>
+      </article>
+
+      <article class="game-card" data-title="Mecha Strike" data-category="Action" data-url="">
+        <div class="game-art art-mecha"><span>🤖</span><small>POWER UP</small></div>
+        <div class="game-details"><h3>Mecha Strike</h3><p>Prepare for the challenge.</p><div class="game-bottom"><span class="category-tag">Action</span><button class="play-btn" aria-label="Play Mecha Strike">▶</button></div></div>
+      </article>
+
+      <article class="game-card" data-title="Puzzle Portal" data-category="Puzzle" data-url="">
+        <div class="game-art art-puzzle"><span>🧩</span><small>THINK DIFFERENT</small></div>
+        <div class="game-details"><h3>Puzzle Portal</h3><p>Challenge your mind.</p><div class="game-bottom"><span class="category-tag">Puzzle</span><button class="play-btn" aria-label="Play Puzzle Portal">▶</button></div></div>
+      </article>
+
+      <article class="game-card" data-title="Sky Runner" data-category="Action" data-url="">
+        <div class="game-art art-runner"><span>⚡</span><small>RUN FREE</small></div>
+        <div class="game-details"><h3>Sky Runner</h3><p>Race into the unknown.</p><div class="game-bottom"><span class="category-tag">Action</span><button class="play-btn" aria-label="Play Sky Runner">▶</button></div></div>
+      </article>
+    </div>
+    <p id="emptyMessage" class="empty-message" hidden>No games found. Try another search.</p>
+    <p class="demo-note">Game cards are currently placeholders. We'll connect real playable games next.</p>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="section-heading"><div><p class="section-kicker">FIND YOUR NEXT FAVOURITE</p><h2>Explore <span>Categories</span></h2></div></div>
+    <div class="category-grid">
+      <button class="category-card" data-pick="Action"><span>⚔️</span><b>Action</b><small>Fast-paced fun</small></button>
+      <button class="category-card" data-pick="Racing"><span>🏎️</span><b>Racing</b><small>Speed and skill</small></button>
+      <button class="category-card" data-pick="Adventure"><span>🛡️</span><b>Adventure</b><small>Explore new worlds</small></button>
+      <button class="category-card" data-pick="Space"><span>🚀</span><b>Space</b><small>Beyond the stars</small></button>
+      <button class="category-card" data-pick="Puzzle"><span>🧩</span><b>Puzzle</b><small>Challenge your mind</small></button>
+    </div>
+  </section>
+
+  <section class="section new-section" id="new-games">
+    <div class="section-heading"><div><p class="section-kicker">FRESH FROM THE ARCADE</p><h2>New <span>Games</span></h2></div></div>
+    <div class="coming-soon"><span>✦</span><div><h3>Something exciting is coming</h3><p>Our game library is just getting started. Stay tuned for new adventures.</p></div></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="brand footer-brand" href="#"><span class="brand-icon">◇</span><span>LEGENDRY<br>GAMES</span></a>
+    <p>Discover your next adventure.</p>
+    <div class="footer-links"><a href="#trending">Games</a><a href="#categories">Categories</a><a href="mailto:contact@legendrygames.example">Contact</a></div>
+    <small>© <span id="year"></span> Legendry Games. Built for players.</small>
+  </div>
+</footer>
 </body>
 </html>
