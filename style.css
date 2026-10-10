@@ -199,3 +199,8 @@ h1 span,.section-heading h2 span { background:linear-gradient(90deg,#c084fc,#67e
 @media(prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; }
 }
+
+/* Preview cards remain visibly unavailable until a real game is connected. */
+.play-btn:disabled { width:auto; min-width:52px; padding:0 10px; border-radius:999px; background:#292c3b; color:#b9bdd0; cursor:not-allowed; font-size:11px; }
+.game-coming-soon { border-color:rgba(139,92,246,.22); }
+.game-coming-soon .game-art { filter:saturate(.82); }
