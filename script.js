@@ -96,17 +96,20 @@ navLinks.querySelectorAll("a").forEach(link => {
 });
 
 gameCards.forEach(card => {
-  card.querySelector(".play-btn").addEventListener("click", () => {
-    const gameUrl = card.dataset.url.trim();
+  const playButton = card.querySelector(".play-btn");
+  const gameUrl = (card.dataset.url || "").trim();
 
-    if (gameUrl) {
+  if (!gameUrl) {
+    playButton.disabled = true;
+    playButton.textContent = "Soon";
+    playButton.setAttribute("aria-label", `${card.dataset.title} coming soon`);
+    playButton.title = "This game is not published yet";
+    card.classList.add("game-coming-soon");
+  } else {
+    playButton.addEventListener("click", () => {
       window.location.href = gameUrl;
-    } else {
-      alert(
-        `${card.dataset.title} is not connected to a playable game yet. We will add its game files or URL next.`
-      );
-    }
-  });
+    });
+  }
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
